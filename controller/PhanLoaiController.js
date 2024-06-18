@@ -39,6 +39,16 @@ const PhanLoaiController = {
         }catch(err){
             res.status(500).json(err);
         }
+    },
+
+
+    getPhanLoai1:async(req,res) =>{
+        try{
+            const phanLoais = await PhanLoai.find({MaPhanLoai: req.params.MaPL});
+            res.status(200).json(phanLoais);
+        }catch(err){
+            res.status(500).json(err);
+        }
     }
   };
   
