@@ -27,15 +27,12 @@ async function ConnectDB() {
       console.log("Lỗi kết nối CSDL", err);
     }
   }
-
 ConnectDB();
-
 
 // Routes
 app.use("/phanLoai",phanLoaiRoute);
 app.use("/plHoatDong",plHoatDongRoute);
 app.use("/quanAo",quanAoRoute);
-
 
 //
 app.listen(process.env.PORT, () => {
